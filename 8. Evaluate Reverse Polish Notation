@@ -1,0 +1,34 @@
+8. Evaluate Reverse Polish Notation
+
+class Solution {
+  public int evalRPN(String[] tokens) {
+    // Write your solution here
+    Deque<Integer> stack = new ArrayDeque<>();
+    for (String token : tokens) {
+      char ch = token.charAt(0);
+      if (token.length() > 1 || Character.isDigit(ch)) {
+        stack.push(Integer.valueOf(token));
+        continue;
+      }
+      int op2 = stack.pop();
+      int op1 = stack.pop();
+      switch (ch) {
+        case '+':
+          stack.push(op1 + op2);
+          break;
+        case '-':
+          stack.push(op1 - op2);
+          break;
+        case '*':
+          stack.push(op1 * op2);
+          break;
+        case '/':
+          stack.push(op1 / op2);
+          break;
+        default:
+          break;
+      }
+    }
+    return stack.peek();
+  }
+}
