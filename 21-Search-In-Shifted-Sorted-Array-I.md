@@ -14,7 +14,7 @@ Examples
 Corner Cases
 What if A is null or A is of zero length? We should return -1 in this case.
 
-'''java
+```java
 
 public class Solution {
   public int search(int[] array, int target) {
