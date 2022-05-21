@@ -15,6 +15,7 @@ Corner Cases
 What if A is null or A is of zero length? We should return -1 in this case.
 
 TC: O(logn)
+
 SC: O(1)
 
 ```java
