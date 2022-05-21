@@ -1,4 +1,4 @@
-#21. Search In Shifted Sorted Array I
+#EX. Search In Shifted Sorted Array I
 
 
 判断一个二叉树是否对称。
