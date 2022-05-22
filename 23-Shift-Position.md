@@ -20,10 +20,10 @@ What if A is null or A is of zero length? We should return -1 in this case.
 + 如果array[mid] >= array[right]，证明[mid]的值是从[mid]到[right]的最大值，left = mid + 1（[mid]是大的值所以可以舍弃）;
 + array[left]应该是最小值，因为整个从左到右是
 
-# shifted ascending array
 ![shifted ascending array](images/shifted-ascending-array.png)
 
 TC: O(logn)
+
 SC：O（1)
 
 ```java
