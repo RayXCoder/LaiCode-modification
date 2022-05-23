@@ -20,7 +20,7 @@ SC: O(mn)
 
 ## my consideration:
 + In this questions, we need to use a xy-coordinator to check and look for the k-th smallest number.
-+ First of all, we need to find the initl point (x, y) = (0, 0). \ The 2nd smallest sum would be (x + 1, y) = (1, 0) or  (x, y + 1) = (0, 1). \ It is impossible to be (x + 1, y + 1) = (0, 1)
++ First of all, we need to find the initl point (x, y) = (0, 0).  The 2nd smallest sum would be (x + 1, y) = (1, 0) or  (x, y + 1) = (0, 1).  It is impossible to be (x + 1, y + 1) = (0, 1)
 
 
   
