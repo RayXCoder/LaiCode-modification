@@ -7,3 +7,4 @@ My consideration  about some questions
 + [22. Search In Shifted Sorted Array II](22-Search-In-Shifted-Sorted-Array-II.md)
 + [23. Shift Position](23-Shift-Position.md)
 + [24. Total Occurrence](24-Total-Occurrence.md)
++ [27. Kth Smallest Sum In Two Sorted Arrays](27-Kth-Smallest-Sum-In-Two-Sorted-Arrays.md)
