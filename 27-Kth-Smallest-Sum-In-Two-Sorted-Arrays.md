@@ -15,12 +15,14 @@ A = {1, 3, 5}, B = {4, 8}
 + 3rd, 4th smallest s are 9 (1 + 8, 4 + 5) 
 + 5th smallest s is 3 + 8 = 11
 
-TC: O(mn)
-SC: O(mn)
+TC: O(klogk)
+SC: O(k), 总共只用了k大小的空间
 
 ## my consideration:
 + In this questions, we need to use a xy-coordinator to check and look for the k-th smallest number.
-+ First of all, we need to find the initl point (x, y) = (0, 0). <br /> The 2nd smallest sum would be (x + 1, y) = (1, 0) or  (x, y + 1) = (0, 1).  It is impossible to be (x + 1, y + 1) = (0, 1) 
++ First of all, we need to find the initl point (x, y) = (0, 0).
+<br /> The 2nd smallest sum would be (x + 1, y) = (1, 0) or  (x, y + 1) = (0, 1).
+<br /> It is impossible to be (x + 1, y + 1) = (0, 1) 
 + Thus, If (x, y) is the m smallest sum, (x + 1, y) or (x, y + 1) is the m + 1 smallest sum
 
 所以我们可以得到一个推论，假如当前组合(x, y)是第m小的和，那么(x + 1, y)和(x, y + 1)也可能是第m+1小，至于到底是不是那得让小顶堆说了算。因此，我们用一个小顶堆来记录组合，按照元素和作为比较条件。每从堆顶拿出一个组合，把它对应的两个相邻的组合放入堆里。重复k-1次，这样堆顶就是和第k小的组合了。
