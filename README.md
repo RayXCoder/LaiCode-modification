@@ -1,7 +1,7 @@
 # LaiCode-modification
 My consideration  about some questions
 
-# HashTable and String I
+## HashTable and String I
 + [68. Missing Number I](68-Missing-Number-I.md)
 
 ## Graph Search II : DFS
