@@ -28,6 +28,10 @@ Given a number of different denominations of coins (e.g., 1 cent, 5 cents, 10 ce
 
 ]
 
+TC: O(target^n)
+
+SC: O(n)
+
 ```java
 
 public class Solution {
