@@ -3,6 +3,7 @@ My consideration  about some questions
 
 ## HashTable and String I
 + [68. Missing Number I](68-Missing-Number-I.md)
++ [652. Common Numbers Of Two Sorted Arrays(Array version)](652-Common-Numbers-Of-Two-Sorted-Arrays(Array-version).md)
 
 ## Graph Search II : DFS
 + [62. All Subsets I](62-All-Subsets-I.md)
