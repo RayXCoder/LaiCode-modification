@@ -64,7 +64,7 @@ public class Solution {
       comb.add(i);
       
       helper(target - i * coins[index], coins, result, comb, index + 1);
-      comb.remove(comb.size() - 1);
+      comb.remove(comb.size() - 1);//绝对不能用cur.length() - 1
     }
   }
 }
