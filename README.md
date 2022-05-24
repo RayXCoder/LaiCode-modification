@@ -3,8 +3,8 @@ My consideration  about some questions
 
 ## Graph Search II : DFS
 + [62. All Subsets I](62-All-Subsets-I.md)
-+ [66. All Valid Permutations Of Parentheses I](66-All-Valid-Permutations-Of-Parentheses-I.md)
 + [64. All Permutations I](64-All-Permutations-I.md)
++ [66. All Valid Permutations Of Parentheses I](66-All-Valid-Permutations-Of-Parentheses-I.md)
 
 ## Cross Training DIY
 + [8. Evaluate Reverse Polish Notation](8-Evaluate-Reverse-Polish-Notation.md)
