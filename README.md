@@ -1,6 +1,9 @@
 # LaiCode-modification
 My consideration  about some questions
 
+# HashTable and String I
++ [68. Missing Number I](68-Missing-Number-I.md)
+
 ## Graph Search II : DFS
 + [62. All Subsets I](62-All-Subsets-I.md)
 + [64. All Permutations I](64-All-Permutations-I.md)
