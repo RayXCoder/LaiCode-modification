@@ -30,7 +30,7 @@ Output: [0,1]
 + Only one valid answer exists.
 
 ## notes:
-我使用了652的solution试图解决，但是发现不行，因为这个array不是sorted ascending
+我使用了652的solution试图解决，但是发现不行，因为这个array不是sorted ascending，同时主义审题，这道题问的是index，而是直接的elements of the array.
 
 TC: o(n)
 
