@@ -31,3 +31,28 @@ Output: [0,1]
 
 ## notes:
 我使用了652的solution试图解决，但是发现不行，因为这个array不是sorted ascending
+
+TC: o(n)
+
+SC: O(n)
+
+```java
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+        //HashMap <key, value>
+        
+            for(int i = 0; i < nums.length; i++){
+            
+                int complement = target - nums[i];
+                if(map.containsKey(complement)){
+                    return new int[]{i, map.get(complement)};
+                    //不能这么用：eturn new int[]{i, map.get(complement)};
+                    //这道题问的是对应的index，所以不能直接上交value，而是上交index of value
+                }
+                map.put(nums[i], i);
+            }
+        
+        return null;
+    }
+}
