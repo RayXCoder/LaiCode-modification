@@ -31,3 +31,23 @@ The input must be a binary string of length 32.
  
 
 ### Follow up: If this function is called many times, how would you optimize it?
+
+TC: O(1)
+
+SC: O(1)
+
+```java
+public class Solution {
+    // you need to treat n as an unsigned value
+    public int hammingWeight(int n) {
+        int ones = 1;
+        int count = 0;
+        
+        while(n != 0){
+            count += n & ones;
+            n >>>= 1;
+        }
+        
+        return count;
+    }
+}
