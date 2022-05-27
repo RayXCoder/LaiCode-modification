@@ -25,3 +25,48 @@ Output: [8,9,9,9,0,0,0,1]
 + The number of nodes in each linked list is in the range [1, 100].
 + 0 <= Node.val <= 9
 + It is guaranteed that the list represents a number that does not have leading zeros.
+
+TC: O(max(m, n))
+
+SC: O(max(m, n))
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode dummy = new ListNode(0);
+        
+        ListNode a = l1;
+        ListNode b = l2;
+        ListNode cur = dummy;
+        int term = 0;
+        
+        while(a != null || b != null || term != 0){
+            //int term = 0;如果把term设在这里就不能保存上一轮中当 a + b > 9时余下来的数字了。
+            if(a != null){
+                term += a.val;
+                a = a.next;
+            }
+            
+            if(b != null){
+                term += b.val;
+                b = b.next;
+            }
+            
+            cur.next = new ListNode(term % 10);
+            term = term / 10;
+            cur = cur.next;
+        }
+        
+        return dummy.next;
+    }
+}
