@@ -26,4 +26,5 @@ My consideration  about some questions
 + [LeetCode 191. Number of 1 Bits](LeetCode-191-Number-of-1-Bits.md)
 + [LeetCode 2. Add Two Numbers](LeetCode-2-Add-Two-Numbers.md)
 + [LeetCode 3. Longest Substring Without Repeating Characters](LeetCode-3-Longest-Substring-Without-Repeating-Characters.md)
-+ [leetCode 50. Pow(x, n)](LeetCode-50-Pow(x-and-n).md)
++ [LeetCode 50. Pow(x, n)](LeetCode-50-Pow(x-and-n).md)
++ [LeetCode 268. Missing Number](LeetCode-268-Missing-Number.md)
