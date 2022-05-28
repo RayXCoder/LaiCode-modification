@@ -32,7 +32,6 @@ Explanation: n = 9 since there are 9 numbers, so all numbers are in the range [0
 My consideration: By the discrete mathmatics --- Associative Laws A xor (B xor C) = (A xor B) xor C)
 
 ### Algorithm: 
-
 Because we know that nums contains nn numbers and that it is missing exactly one number on the range [0..n-1], we know that nn definitely replaces the missing number in nums. Therefore, if we initialize an integer to nn and XOR it with every index and value, we will be left with the missing number. Consider the following example (the values have been sorted for intuitive convenience, but need not be):
 ![XOR ways](images/XORways.png)
 
@@ -50,6 +49,36 @@ class Solution {
         }
         
         return missing;
+        
+    }
+}
+```
+
+## Method 2. BFS ways
+
+My consideration: I sued the ways from LaiOffer-69. It is related to BFS. But, it is slower than method 1 in the leetCode
+TC: O(logn)
+
+SC: O(1)
+
+```java
+class Solution {
+    public int missingNumber(int[] nums) {
+        int left = 0;
+        int right = nums.length;
+        
+        Arrays.sort(nums);
+        
+        while(left < right){
+            int mid = left + (right - left) / 2;
+            if(nums[mid] == mid){ //如果相等，那证明 left到mid不缺数字，自然往后走
+                left = mid + 1;
+            }else{ //如果不等，那证明left到mid却数字，锁定前半部分。
+                right = mid;
+            }
+        }
+        
+        return left;
         
     }
 }
