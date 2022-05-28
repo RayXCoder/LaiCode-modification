@@ -34,7 +34,7 @@ My consideration: By the discrete mathmatics --- Associative Laws A xor (B xor C
 ### Algorithm: 
 
 Because we know that nums contains nn numbers and that it is missing exactly one number on the range [0..n-1], we know that nn definitely replaces the missing number in nums. Therefore, if we initialize an integer to nn and XOR it with every index and value, we will be left with the missing number. Consider the following example (the values have been sorted for intuitive convenience, but need not be):
-
+![XOR ways](images/XORways.png)
 
 TC: O(n)
 
