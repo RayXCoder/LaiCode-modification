@@ -1,9 +1,7 @@
 # 3. Longest Substring Without Repeating Characters
-3-Longest-Substring-Without-Repeating-Characters.md
+LeetCode-3-Longest-Substring-Without-Repeating-Characters.md
 
 Given a string s, find the length of the longest substring without repeating characters.
-
- 
 
 ## Example:
 
@@ -31,6 +29,11 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 s consists of English letters, digits, symbols and spaces.
 
 ## Method 1 - DP (This method would caused --- Time Limited Exceeded in extreme situation)
+
+TC: O(n^3)
+
+SC: O(min(m, n)). We need O(k) space for checking a substring has no duplicate characters, where kk is the size of the Set. The size of the Set is upper bounded by the size of the string nn and the size of the charset/alphabet m.
+
 ```java
 public class Solution {
     public int lengthOfLongestSubstring(String s) {
@@ -70,6 +73,46 @@ public class Solution {
     }
 }
 
+```
 
-## Method 2
+## Method 2 --- DP --- sliding down
+
+TC: O(2n) == O(n)
+
+SC: O(min(m, n))
+
+```java
+public class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        int[] letters = new int[128];
+        
+        int left = 0;
+        int right = 0;
+        int res = 0;
+        while(right < s.length()){
+            
+            char cur = s.charAt(right);
+            letters[cur]++;//make a report for each letter or symbols to avoid the repetition
+                           //and report the times of the letter occurance
+            
+            
+            //必须使用while，毕竟不可能重复字母字符只在开头结尾，
+            //所以必须使用while顺着检查right左边的字符直到left碰到和right相重复的字母字符。
+            //example: p w w k e w
+            while(letters[cur] > 1){
+                char start = s.charAt(left);
+                letters[start]--;
+                left++;
+            }
+            //right: the end of the unique string
+            //left: the start of the unique string
+              
+            res = Math.max(res, right - left + 1);
+            right++;
+        }
+        
+        return res;
+    }
+}
+
 
