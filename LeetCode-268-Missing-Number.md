@@ -23,10 +23,10 @@ Explanation: n = 9 since there are 9 numbers, so all numbers are in the range [0
 
 ## Constraints:
 
-n == nums.length
-1 <= n <= 104
-0 <= nums[i] <= n
-All the numbers of nums are unique.
++ n == nums.length
++ 1 <= n <= 104
++ 0 <= nums[i] <= n
++ All the numbers of nums are unique.
 
 ### Method 1. XOR ways
 My consideration: By the discrete mathmatics --- Associative Laws A xor (B xor C) = (A xor B) xor C)
