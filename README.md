@@ -28,3 +28,4 @@ My consideration  about some questions
 + [LeetCode 3. Longest Substring Without Repeating Characters](LeetCode-3-Longest-Substring-Without-Repeating-Characters.md)
 + [LeetCode 50. Pow(x, n)](LeetCode-50-Pow(x-and-n).md)
 + [LeetCode 268. Missing Number](LeetCode-268-Missing-Number.md)
++ [LeetCode 9. Palindrome Number](LeetCode-9-Palindrome-Number.md)
