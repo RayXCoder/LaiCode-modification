@@ -31,3 +31,4 @@ My consideration  about some questions
 + [LeetCode 268. Missing Number](LeetCode-268-Missing-Number.md)
 + [LeetCode 9. Palindrome Number](LeetCode-9-Palindrome-Number.md)
 + [LeetCode 12. Integer to Roman](LeetCode-12-Integer-to-Roman.md);
++ [LeetCode 48. Rotate Image](LeetCode-48-Rotate-Image.md)
