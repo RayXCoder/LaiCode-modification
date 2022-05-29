@@ -29,3 +29,4 @@ My consideration  about some questions
 + [LeetCode 50. Pow(x, n)](LeetCode-50-Pow(x-and-n).md)
 + [LeetCode 268. Missing Number](LeetCode-268-Missing-Number.md)
 + [LeetCode 9. Palindrome Number](LeetCode-9-Palindrome-Number.md)
++ [LeetCode 12. Integer to Roman](LeetCode-12-Integer-to-Roman.md);
