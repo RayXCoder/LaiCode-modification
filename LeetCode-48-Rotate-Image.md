@@ -14,7 +14,8 @@ You have to rotate the image in-place, which means you have to modify the input 
 + -1000 <= matrix[i][j] <= 1000
 
 TC: O(M). 
-+ We perform two steps; transposing the matrix, and then reversing each row. Transposing the matrix has a cost of O(M) because we're moving the value of each cell once. Reversing each row also has a cost of O(M), because again we're moving the value of each cell once.
+
+We perform two steps; transposing the matrix, and then reversing each row. Transposing the matrix has a cost of O(M) because we're moving the value of each cell once. Reversing each row also has a cost of O(M), because again we're moving the value of each cell once.
 
 SC: O(1)
 
