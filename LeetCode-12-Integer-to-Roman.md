@@ -40,3 +40,29 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 ## Constraints:
 + 1 <= num <= 3999
+
+TC: O(1)
+
+SC: O(1)
+
+```java
+class Solution {
+    public String intToRoman(int num) {
+        int[] realNumber = new int[]{1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        String[] symbols = new String[]{"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+        StringBuilder sb = new StringBuilder();
+        
+        //To avoid increase the runtime, there are num > 0
+        for(int i = 0; i < realNumber.length && num > 0; i++){
+            while(realNumber[i] <= num){
+                num -= realNumber[i];
+                sb.append(symbols[i]);
+                    
+            }
+        }
+        
+        return sb.toString();
+        
+    }
+}
+```
