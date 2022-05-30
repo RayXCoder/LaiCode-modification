@@ -29,6 +29,11 @@ Output: -1
 + nums is an ascending array that is possibly rotated.
 + -10^4 <= target <= 10^4
 
+## Consideration:
++ 1. use the mid to compare the left and right to cut the sequence of ascending sequence
++ 2. if the nums[mid] > nums[right], left --> mid is ascending, using the target to compare with the nums[left] and nums[mid] to sure the next left or right. 
+<br/>if the nums[mid] < nums[right], mid --> right is ascending, using the target to compare with the nums[mid] and nums[right] to sure the next left or right.
+
 TC: O(logn)
 
 SC: O(1)
