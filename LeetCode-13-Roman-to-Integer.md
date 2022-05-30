@@ -37,3 +37,59 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 + 1 <= s.length <= 15
 + s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
 + It is guaranteed that s is a valid roman numeral in the range [1, 3999].
+
+TC: O(1)
+
+SC: O(1)
+
+```java
+class Solution {
+   
+    public int romanToInt(String s) {
+        
+        //用map将所需要的罗马数字归入一张hashMap
+        Map<String, Integer> values = new HashMap<>();
+    
+        values.put("M", 1000);
+        values.put("D", 500);
+        values.put("C", 100);
+        values.put("L", 50);
+        values.put("X", 10); //掉了一个x,导致结果出错，所以必须仔细
+        values.put("V", 5);
+        values.put("I", 1);
+    
+        if(s == null || s.length() == 0){
+            return 0;
+        }
+        
+        
+        int sum = 0;
+        
+        int i = 0;
+        while(i < s.length()){
+            //出去当前指针上的罗马数字
+            String currentString = s.substring(i, i + 1);
+            int currentValue = values.get(currentString);
+            int nextValue = 0;
+            
+            //取出下一位的罗马数字
+            if(i + 1 < s.length()){
+                String nextString = s.substring(i + 1, i + 2);
+                nextValue = values.get(nextString);
+            }
+            
+            //检测当前字母以及下个字母是否组成了合适的罗马数字，例如：IX
+            if(currentValue < nextValue){   //如果符合，得出这组罗马数字对应的数字
+                sum += (nextValue - currentValue);
+                i += 2;
+            }else{                         //如果不符合，则只加当前的罗马数字对应的数字
+                sum += currentValue;
+                i += 1;
+            }
+        }
+        
+        return sum;
+        
+    }
+}
+```
