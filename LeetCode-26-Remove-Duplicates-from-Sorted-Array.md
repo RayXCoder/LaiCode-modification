@@ -10,3 +10,33 @@ Return k after placing the final result in the first k slots of nums.
 Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
 
 ![26. remove duplicates from sorted array](images/26-unique-order.png)
+
+
+TC: O(n)
+
+SC: O(1)
+
+```java
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        if(nums == null || nums.length == 0){
+            return 0;
+        }
+       
+        int j = 0;
+        
+        for(int i = 1; i < nums.length; i++){
+            if(nums[i] != nums[j]){
+                j++;
+                nums[j] = nums[i];
+            }
+        }
+        
+        return j + 1;
+    }
+    
+    //1 2 2 3
+    //  i
+    //  j
+}
+```
