@@ -35,3 +35,4 @@ My consideration  about some questions
 + [LeetCode 13. Roman to Integer](LeetCode-13-Roman-to-Integer.md)
 + [LeetCode 35. Search Insert Position](LeetCode-35-Search-Insert-Position.md)
 + [LeetCode 33. Search in Rotated Sorted Array](LeetCode-33-Search-in-Rotated-Sorted-Array.md)
++ [LeetCode 14. Longest Common Prefix](LeetCode-14-Longest-Common-Prefix.md)
