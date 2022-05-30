@@ -34,10 +34,7 @@ class Solution {
         if(strs == null || strs.length == 0){
             return "";
         }
-            return longestCommonPrefix(strs, 0, strs.length - 1);
-        
-        
-        
+            return longestCommonPrefix(strs, 0, strs.length - 1); 
     }
     
     //A  B  C  D  E
