@@ -40,3 +40,4 @@ My consideration  about some questions
 + [LeetCode 26. Remove Duplicates from Sorted Array](LeetCode-26-Remove-Duplicates-from-Sorted-Array.md)
 + [LeetCode 27. Remove Element](LeetCode-27-Remove-Element.md)
 + [LeetCode 7. Reverse Integer](LeetCode-7-Reverse-Integer.md)
++ [LeetCode 46. Permutations](LeetCode-46-Permutations.md)
