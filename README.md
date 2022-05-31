@@ -39,3 +39,4 @@ My consideration  about some questions
 + [LeetCode 15. 3Sum](LeetCode-15-3Sum.md)
 + [LeetCode 26. Remove Duplicates from Sorted Array](LeetCode-26-Remove-Duplicates-from-Sorted-Array.md)
 + [LeetCode 27. Remove Element](LeetCode-27-Remove-Element.md)
++ [LeetCode 7. Reverse Integer](LeetCode-7-Reverse-Integer.md)
