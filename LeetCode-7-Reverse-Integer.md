@@ -11,7 +11,7 @@ TC: O(log(x)). 数字是二进制的， There are roughly log_{10}_(x) digits in
 
 SC: O(1)
 
-``java
+```java
 class Solution {
     public int reverse(int x) {
        int pop = 0;
