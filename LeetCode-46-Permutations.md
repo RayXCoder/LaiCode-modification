@@ -22,3 +22,45 @@ Output: [[1]]
 + 1 <= nums.length <= 6
 + -10 <= nums[i] <= 10
 + All the integers of nums are unique.
+
+TC: O(n!)
+
+SC: O(n)
+
+```java
+class Solution {
+    public List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        
+        helper(result, nums, 0);
+        return result;
+    }
+    
+    private void helper(List<List<Integer>> result, int[] nums, int index){
+        if(index == nums.length){
+            
+            List<Integer> cur1 = new ArrayList<>();
+            for(int num : nums){
+                cur1.add(num);
+            }
+            
+            result.add(new ArrayList<>(cur1));
+            cur1.removeAll(cur1);
+            return;
+        }
+        
+       
+        for(int i = index; i < nums.length; i++){
+            swap(index, i, nums);
+            helper(result, nums, index + 1);
+            swap(index, i, nums);
+        }
+    }
+    
+    private void swap(int left, int right, int[] nums){
+        int temp = nums[left];
+        nums[left] = nums[right];
+        nums[right] = temp;
+    }
+}
+```
