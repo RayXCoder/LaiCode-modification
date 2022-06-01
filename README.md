@@ -41,3 +41,4 @@ My consideration  about some questions
 + [LeetCode 27. Remove Element](LeetCode-27-Remove-Element.md)
 + [LeetCode 7. Reverse Integer](LeetCode-7-Reverse-Integer.md)
 + [LeetCode 46. Permutations](LeetCode-46-Permutations.md)
++ [LeetCode 28. Implement strStr()](LeetCode-28-Implement-strStr().md)
