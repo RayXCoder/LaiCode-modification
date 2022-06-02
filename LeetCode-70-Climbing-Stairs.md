@@ -23,4 +23,30 @@ Explanation: There are three ways to climb to the top.
  
 
 ## Constraints:
-= 1 <= n <= 45
++ 1 <= n <= 45
+
+## Consideration:
+![climbing stairs DP](images/70-climbing-stairs.png)
+
+
+TC: O(n)
+
+SC O(n)
+
+```java
+class Solution {
+    public int climbStairs(int n) {
+        
+        int[] dp = new int[n + 1];
+        
+        dp[0] = 1;
+        dp[1] = 1;
+        
+        for(int i = 2; i <= n; i++){
+            dp[i] = dp[i - 1] + dp[i - 2];
+        }
+        
+        return dp[n];
+    }
+}
+```
