@@ -51,6 +51,7 @@ class Solution {
                 }else{
                     //i代表开始，J 代表结尾，如果 j - i = end - start = 单词长度
                     //单词长度为1或2时则只需要比较i，j位置上的字母本身就行了
+                    //example: "a", "aa"
                     dp[i][j] = s.charAt(i) == s.charAt(j) && (j - i <= 2 || dp[i + 1][j - 1]);
                     if(dp[i][j] == true){
                         curLen = j - i + 1;
