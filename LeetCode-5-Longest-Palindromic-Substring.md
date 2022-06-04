@@ -27,6 +27,9 @@ class Solution {
         int len = s.length();
         
         boolean[][] dp = new boolean[len][len];
+        
+        //dp[i][j] check the word from index i to index j whether sysmmetric or not
+        
         int result = 1;
         int curLen = 0;
         
@@ -44,6 +47,7 @@ class Solution {
         //dp[0][3] --->  dp[1][2]，
         //如果先行后列，则dp[1][2]保持空白状态False，必然出错
         //如果先列后行，则dp[1][2]已经将状态改为True, 才能得出正确结果
+        
         for(int j = 0; j < len; j++){
             for(int i = 0; i < j; i++){
                 if(i == j){
