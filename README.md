@@ -51,4 +51,4 @@ My consideration  about some questions
 + [LeetCode 49. Group Anagrams](LeetCode-49-Group-Anagrams.md)
 + [LeetCode 5. Longest Palindromic Substring](LeetCode-5-Longest-Palindromic-Substring.md)
 + [LeetCode 18. 4Sum](LeetCode-18-4Sum.md)
-+ [LeetCode 94. Binary Tree Inorder Traversa](LeetCode-94-Binary-Tree-Inorder-Traversal.md)
++ [LeetCode 94. Binary Tree Inorder Traversal](LeetCode-94-Binary-Tree-Inorder-Traversal.md)
