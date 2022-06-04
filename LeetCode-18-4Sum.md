@@ -38,12 +38,12 @@ class Solution {
         Arrays.sort(nums);
         for(int i = 0; i < nums.length - 3; i++){
             
-            if(i > 0 && nums[i] == nums[i - 1]){
+            if(i > 0 && nums[i] == nums[i - 1]){ //skip duplicate
                 continue;
             }
             
             for(int j = i + 1; j < nums.length - 2; j++){
-                if(j > i + 1 && nums[j] == nums[j - 1]){
+                if(j > i + 1 && nums[j] == nums[j - 1]){ //skip duplicate
                     continue;
                 }
                 
@@ -54,13 +54,13 @@ class Solution {
                     if(sum < target){
                         left++;
                         
-                        while(left < right && nums[left] == nums[left - 1]){
+                        while(left < right && nums[left] == nums[left - 1]){ //skip duplicate
                             left++;
                         }
                     }else if(sum > target){
                         right--;
                         
-                        while(left < right && nums[right] == nums[right + 1]){
+                        while(left < right && nums[right] == nums[right + 1]){ //skip duplicate
                             right--;
                         }
                     }else{
@@ -73,11 +73,11 @@ class Solution {
                         left++;
                         right--;
                         
-                        while(left < right && nums[right] == nums[right + 1]){
+                        while(left < right && nums[right] == nums[right + 1]){ //skip duplicate
                             right--;
                         }
                         
-                        while(left < right && nums[left] == nums[left - 1]){
+                        while(left < right && nums[left] == nums[left - 1]){ //skip duplicate
                             left++;
                         }
                     }
@@ -88,4 +88,5 @@ class Solution {
         return result;
     }
 }
+
 ```
