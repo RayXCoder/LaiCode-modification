@@ -5,7 +5,7 @@ Given the root of a binary tree, return the inorder traversal of its nodes' valu
 ![94](images/94-inOrder-Traversa.png)
 
 
-## Method 1.
+## Method 1. Recursion
 
 ```java
 /**
