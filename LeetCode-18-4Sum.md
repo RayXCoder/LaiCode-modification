@@ -1,5 +1,4 @@
 # 18. 4Sum
-LeetCode-18-4Sum.md
 
 Given an array nums of n integers, return an array of all the unique quadruplets [nums[a], nums[b], nums[c], nums[d]] such that:
 + 0 <= a, b, c, d < n
@@ -22,3 +21,71 @@ Output: [[2,2,2,2]]
 + 1 <= nums.length <= 200
 + -10^9 <= nums[i] <= 10^9
 + -10^9 <= target <= 10^9
+
+TC: O(n^3)
+
+SC: O(n)
+
+```java
+class Solution {
+    public List<List<Integer>> fourSum(int[] nums, int target) {
+        List<List<Integer>> result = new ArrayList<>();
+        List<Integer> cur = new ArrayList<>();
+        if(nums.length < 4){
+            return result;
+        }
+        
+        Arrays.sort(nums);
+        for(int i = 0; i < nums.length - 3; i++){
+            
+            if(i > 0 && nums[i] == nums[i - 1]){
+                continue;
+            }
+            
+            for(int j = i + 1; j < nums.length - 2; j++){
+                if(j > i + 1 && nums[j] == nums[j - 1]){
+                    continue;
+                }
+                
+                int left = j + 1;
+                int right = nums.length - 1;
+                while(left < right){
+                    int sum = nums[i] + nums[j] + nums[left] + nums[right];
+                    if(sum < target){
+                        left++;
+                        
+                        while(left < right && nums[left] == nums[left - 1]){
+                            left++;
+                        }
+                    }else if(sum > target){
+                        right--;
+                        
+                        while(left < right && nums[right] == nums[right + 1]){
+                            right--;
+                        }
+                    }else{
+                        cur.add(nums[i]);
+                        cur.add(nums[j]);
+                        cur.add(nums[left]);
+                        cur.add(nums[right]);
+                        result.add(new ArrayList<>(cur));
+                        cur.removeAll(cur);
+                        left++;
+                        right--;
+                        
+                        while(left < right && nums[right] == nums[right + 1]){
+                            right--;
+                        }
+                        
+                        while(left < right && nums[left] == nums[left - 1]){
+                            left++;
+                        }
+                    }
+                }
+            }
+        }
+        
+        return result;
+    }
+}
+```
