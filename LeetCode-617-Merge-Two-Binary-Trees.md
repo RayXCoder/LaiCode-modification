@@ -9,3 +9,48 @@ Return the merged tree.
 Note: The merging process must start from the root nodes of both trees.
 
 ![617](images/617-merge-binary-tree.png)
+
+
+TC: O(n)
+
+SC: O(n)
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public TreeNode mergeTrees(TreeNode root1, TreeNode root2) {
+        
+        if(root1 == null){
+            return root2;
+        }
+        
+        if(root2 == null){
+            return root1;
+        }
+        
+        //My behavior in current layer
+        root1.val += root2.val;
+        
+        //My hope from left child and right child
+        root1.left = mergeTrees(root1.left, root2.left);
+        root1.right = mergeTrees(root1.right, root2.right);
+        
+        //my report to the parent
+        return root1;
+    }
+}
+```
