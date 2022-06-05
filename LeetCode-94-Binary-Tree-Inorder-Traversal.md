@@ -4,6 +4,15 @@ Given the root of a binary tree, return the inorder traversal of its nodes' valu
 
 ![94](images/94-inOrder-Traversa.png)
 
+Method 1: 
+TC: O(n)
+
+SC: O(n)
+
+Method 2: 
+TC: O(n)
+
+SC: O(n)
 
 ## Method 1. Recursion
 
@@ -43,7 +52,7 @@ class Solution {
 }
 ```
 
-## Method 2. Recursion
+## Method 2. Iterative
 
 ```java
 class Solution {
