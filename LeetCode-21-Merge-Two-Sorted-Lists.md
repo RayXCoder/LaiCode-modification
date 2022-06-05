@@ -13,9 +13,10 @@ Return the head of the merged linked list.
 + -100 <= Node.val <= 100
 + Both list1 and list2 are sorted in non-decreasing order.
 
+## Method 1 -- Iteration
 TC: O(n + m)
 
-SC: O(n)
+SC: O(1)
 
 ```java
 /**
@@ -55,6 +56,36 @@ class Solution {
         }
         
         return dummy.next;
+    }
+}
+```
+
+## Method 2 -- Recursion
+
+TC: O(n + m)
+
+SC: O(n + m)
+```java
+class Solution {
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+    
+        
+        if(list1 == null){
+            return list2;
+        }
+        
+        if(list2 == null){
+            return list1;
+        }
+        
+        if(list1.val < list2.val){
+            list1.next = mergeTwoLists(list1.next, list2);
+                return list1;
+        }else{
+            list2.next = mergeTwoLists(list1, list2.next);
+                return list2;
+        }
+        
     }
 }
 ```
