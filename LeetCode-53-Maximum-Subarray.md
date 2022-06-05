@@ -23,3 +23,29 @@ Output: 23
 ## Constraints:
 + 1 <= nums.length <= 10^5
 + -10^4 <= nums[i] <= 10^4
+
+TC: O(n)
+
+SC: O(1)
+
+```java
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int curSub = nums[0];
+        int maxSub = nums[0];
+        
+        for(int i = 1; i < nums.length; i++){
+            
+            //比较过去以及pointer的值
+            //物理意义上： curSub += nums[i];
+            //如果curSub < current pointed (nums[i])就另起开头
+            curSub = Math.max(nums[i], curSub + nums[i]);
+            
+            //maxSub储存最大的值
+            maxSub = Math.max(curSub, maxSub);
+        }
+        
+        return maxSub;
+    }
+}
+```
