@@ -42,3 +42,31 @@ class Solution {
     }
 }
 ```
+
+## Method 2. Recursion
+
+```java
+class Solution {
+    public List<Integer> inorderTraversal(TreeNode root) {
+       List<Integer> result = new ArrayList<>();
+        Deque<TreeNode> stack = new LinkedList<>();
+        
+        //stack.offerFirst(root);
+        TreeNode cur = root;
+        while(cur != null || !stack.isEmpty()){
+            while(cur != null){//如果cur不指向null那就开始走这个循环
+                stack.offerFirst(cur);
+                cur = cur.left;
+            } //走完左边
+            
+            //开始弹出并顺带代入右子树
+            cur = stack.pollFirst();
+            result.add(cur.val);
+            cur = cur.right;
+            
+        }
+        
+        return result;
+    }
+}
+```
