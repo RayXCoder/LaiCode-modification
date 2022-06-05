@@ -36,3 +36,31 @@ Output: []
 ## TC and SC:
 
 ![31](images/31-TC+SC.png)
+
+```java
+class Solution {
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+        List<List<Integer>> result = new ArrayList<>();
+        List<Integer> cur = new ArrayList<>();
+        
+        helper(result, cur, candidates, target, 0);
+        return result;
+    }
+    
+    private void helper(List<List<Integer>> result, List<Integer> cur, int[] candidates, int remain, int index){
+        if(remain == 0){
+            result.add(new ArrayList<>(cur));
+            return;
+        }else if(remain < 0){
+            return;
+        }
+        
+       // int i = index是为了剪枝
+        for(int i = index; i < candidates.length; i++){
+            cur.add(candidates[i]);
+            helper(result, cur, candidates, remain - candidates[i], i);//Index = i. 为了剪枝
+            cur.remove(cur.size() - 1);
+        }
+    }
+}
+```
