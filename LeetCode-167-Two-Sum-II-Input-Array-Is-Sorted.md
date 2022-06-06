@@ -25,10 +25,40 @@ Output: [1,2]
 Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We return [1, 2].
  
 
-Constraints:
-
+## Constraints:
 + 2 <= numbers.length <= 3 * 10^4
 + -1000 <= numbers[i] <= 1000
 + numbers is sorted in non-decreasing order.
 + -1000 <= target <= 1000
 + The tests are generated such that there is exactly one solution.
+
+TC: O(n)
+
+SC: O(1)
+
+```java
+class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+        
+        int left = 0;
+        int right = numbers.length - 1;
+        int[] result = new int[]{-1, -1};
+        
+        while(left < right){
+            int sum = numbers[left] + numbers[right];
+            
+            if(target == sum){
+                result[0] = left + 1;
+                result[1] = right + 1;
+                return result;
+            }else if(sum < target){
+                left++;
+            }else{
+                right--;
+            }
+        }
+        
+        return result;
+    }
+}
+```
