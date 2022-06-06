@@ -16,10 +16,6 @@ Input: nums1 = [1,2], nums2 = [3,4]
 Output: 2.50000
 Explanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
  
-TC: O(log(min(m, n))
-
-SC: O(1)
-
 ## Constraints:
 + nums1.length == m
 + nums2.length == n
@@ -27,6 +23,12 @@ SC: O(1)
 + 0 <= n <= 1000
 + 1 <= m + n <= 2000
 + -10^6 <= nums1[i], nums2[i] <= 10^6
+
+## solution:
+
+TC: O(log(min(m, n))
+
+SC: O(1)
 
 ```java
 class Solution {
