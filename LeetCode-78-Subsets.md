@@ -4,6 +4,9 @@ Given an integer array nums of unique elements, return all possible subsets (the
 
 The solution set must not contain duplicate subsets. Return the solution in any order.
 
+TC: O(N x 2^N)
+
+SC: O(N)
  
 ## Example
 + Example 1:
