@@ -2,7 +2,9 @@
 My consideration  about some questions
 
 ## Recursion I and Sorting Algorithms
++ [13. a to the power of b](13-a-to-the-power-of-b.md)
 + [258. Move 0s To The End I](258-Move-0s-To-The-End-I.md)
+
 
 ## HashTable and String I
 + [68. Missing Number I](68-Missing-Number-I.md)
