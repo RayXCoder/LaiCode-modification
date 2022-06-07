@@ -55,6 +55,10 @@ class Solution {
 
 ## Method 2 -Two Pointers
 
+TC: O(n + m)
+
+SC: O(m)
+
 ```java
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
