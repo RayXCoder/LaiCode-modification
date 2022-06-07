@@ -35,6 +35,12 @@ Note that because m = 0, there are no elements in nums1. The 0 is only there to 
 + 1 <= m + n <= 200
 + -10^9 <= nums1[i], nums2[j] <= 10^9
 
+## Method 1 - Merge and Sort
+
+TC: O((m + n)(log(m+n)). The cost of sorting a list of length xx using a built-in sorting algorithm is O(xlogx). Because in this case we're sorting a list of length m+n, we get a total time complexity of O((n+m)log(n+m)).
+
+SC: O(n)
+
 ```java
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
@@ -46,3 +52,5 @@ class Solution {
     }
 }
 ```
+
+## Method 2 -Two Pointers
