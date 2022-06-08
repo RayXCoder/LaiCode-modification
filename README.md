@@ -26,6 +26,7 @@ My consideration  about some questions
 + [183. 2 Sum Closest](183-2-Sum-Closest.md)
 + [399. Rainbow Sort II](399-Rainbow-Sort-II.md)
 + [201. Largest Container](201-Largest-Container.md)
++ [142. Binary Tree Diameter](142-Binary-Tree-Diameter.md)
 
 # LeetCode-practice
 
