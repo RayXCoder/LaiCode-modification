@@ -23,3 +23,37 @@ Output: 0
 + 3 <= nums.length <= 1000
 + -1000 <= nums[i] <= 1000
 + -10^4 <= target <= 10^4
+
+
+```java
+class Solution {
+    public int threeSumClosest(int[] nums, int target) {
+        int result = 0;
+        int dif = Integer.MAX_VALUE;
+        Arrays.sort(nums);
+        for(int i = 0; i < nums.length - 1; i++){
+            int left = i + 1;
+            int right = nums.length - 1;
+            
+            while(left < right){
+                int sum = nums[i] + nums[left] + nums[right];
+                
+                if(Math.abs(sum - target) <= dif){
+                    dif = Math.abs(sum - target);
+                    result = sum;
+                    
+                }
+                
+                if(sum < target){
+                    left++;
+                }else{
+                    right--;
+                }
+            }
+        }
+        
+        return result;
+        
+    }
+}
+```
