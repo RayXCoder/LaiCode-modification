@@ -53,7 +53,7 @@ class Solution {
         }
         
         for(int i = index; i < candidates.length; ++i){
-            if(i  > index && candidates[i] == candidates[i - 1]){
+            if(i  > index && candidates[i] == candidates[i - 1]){ //去重，防止在之后产生重复的cur list
                 continue;
             }
             if(target - candidates[i] < 0){
