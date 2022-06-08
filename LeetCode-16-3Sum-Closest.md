@@ -24,6 +24,9 @@ Output: 0
 + -1000 <= nums[i] <= 1000
 + -10^4 <= target <= 10^4
 
+TC: O(n^2)
+
+SC: O(1)
 
 ```java
 class Solution {
