@@ -71,3 +71,4 @@ My consideration  about some questions
 + [LeetCode 24. Swap Nodes in Pairs](LeetCode-24-Swap-Nodes-in-Pairs.md)
 + [LeetCode 16. 3Sum Closest](LeetCode-16-3Sum-Closest.md)
 + [LeetCode 100. Same Tree](LeetCode-100-Same-Tree.md)
++ [LeetCode 144. Binary Tree Preorder Traversal](LeetCode-144-Binary-Tree-Preorder-Traversal.md)
