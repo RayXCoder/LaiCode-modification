@@ -43,7 +43,7 @@ The sequence [1, 2, 3, #, #, 4] represents the following binary tree:
  ## Method 1 Iteration
  
  TC: O(n)
- SC: O(logn)
+ SC: O(n)
  
  ```java
  /**
@@ -79,3 +79,40 @@ class Solution {
     }
 }
  ```
+
+## Method 2. Iteration
+
+TC: O(n)
+
+SC: O(n)
+
+```java
+class Solution {
+    public List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        if(root == null){
+            return result;
+        }
+    
+        
+       Deque<TreeNode> stack = new LinkedList<>();
+        stack.offerFirst(root);
+        
+        while(!stack.isEmpty()){
+            TreeNode cur = stack.pollFirst();
+            
+            if(cur.right != null){ //先检测右边
+                stack.offerFirst(cur.right);
+            }
+            
+            if(cur.left != null){ //再检测左边， 这是为了第一个弹出左边，符合，root, left, right的规律
+                stack.offerFirst(cur.left);
+            }
+            
+            result.add(cur.val);
+        }
+        
+        return result;
+    }
+}
+```
