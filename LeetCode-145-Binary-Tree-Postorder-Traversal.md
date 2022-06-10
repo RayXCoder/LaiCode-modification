@@ -5,15 +5,7 @@ Given the root of a binary tree, return the postorder traversal of its nodes' va
 ## Example:
 Example 1:
 
-        5
-
-      /    \
-
-    3        8
-
-  /   \           \
-
-1      4            11
+![145](images/145-postOrder.png)
 
 Post-order traversal is [1, 4, 3, 11, 8, 5]
  
