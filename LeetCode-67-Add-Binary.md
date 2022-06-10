@@ -29,8 +29,6 @@ class Solution {
     public String addBinary(String a, String b) {
         int n = a.length() - 1;
         int m = b.length() - 1;
-       // System.out.println(a.charAt(n));
-        int L = Math.max(m, n);
         int carry = 0;
         StringBuilder sb = new StringBuilder();
         
