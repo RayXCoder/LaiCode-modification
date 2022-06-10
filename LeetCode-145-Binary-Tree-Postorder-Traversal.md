@@ -4,11 +4,17 @@ Given the root of a binary tree, return the postorder traversal of its nodes' va
 
 ## Example:
 Example 1:
-<br/>    1
-<br/>     \
-<br/>       2
-<br/>      /
-<br/>     3
+        5
+
+      /    \
+
+    3        8
+
+  /   \        \
+
+1      4        11
+
+Post-order traversal is [1, 4, 3, 11, 8, 5]
  
 Input: root = [1,null,2,3]
 Output: [3,2,1]
