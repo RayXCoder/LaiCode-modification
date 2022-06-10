@@ -14,6 +14,7 @@ Given the root of a binary tree, determine if it is a valid binary search tree (
 + -2^(31) <= Node.val <= 2^(31) - 1
 
 TC: O(n)
+
 SC: O(n)
 
 ```java
