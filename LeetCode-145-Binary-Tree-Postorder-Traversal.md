@@ -11,9 +11,9 @@ Example 1:
 
     3        8
 
-  /   \        \
+  /   \           \
 
-1      4        11
+1      4            11
 
 Post-order traversal is [1, 4, 3, 11, 8, 5]
  
