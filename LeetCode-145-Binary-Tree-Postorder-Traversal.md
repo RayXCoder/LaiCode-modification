@@ -64,3 +64,41 @@ class Solution {
     }
 }
 ```
+## Method 1. Iteration
+TC: O(n)
+
+SC: O(n)
+
+```java
+class Solution {
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        if(root == null){
+            return result;
+        }
+        
+        Deque<TreeNode> stack = new LinkedList<>();
+        
+        //left   cur
+        //right  left
+        //cur    right
+        stack.offerFirst(root);
+        while(!stack.isEmpty()){
+            TreeNode cur = stack.pollFirst();
+            
+            if(cur.left != null){
+                stack.offerFirst(cur.left);
+            }
+            
+             if(cur.right != null){
+                stack.offerFirst(cur.right);
+            }
+            
+            result.add(cur.val);
+        }
+        
+        Collections.reverse(result);
+        return result;
+    }
+}
+```
