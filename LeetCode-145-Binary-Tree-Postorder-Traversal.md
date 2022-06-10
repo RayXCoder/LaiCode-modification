@@ -30,7 +30,7 @@ TC: O(n)
 
 SC: O(n)
 
-···java
+```java
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
