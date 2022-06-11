@@ -36,7 +36,7 @@ SC: O(n)
 class Solution {
     public boolean isValidBST(TreeNode root) {
         
-        return validate(root, Long.MIN_VALUE, Long.MAX_VALUE);
+        return validate(root, Long.MIN_VALUE, Long.MAX_VALUE); //为了防止Corner case的overflow，所以用long
                                         
     }
     
