@@ -1,4 +1,4 @@
-66. Plus One
+# 66. Plus One
 
 You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
 
@@ -34,3 +34,29 @@ Thus, the result should be [1,0].
 + 1 <= digits.length <= 100
 + 0 <= digits[i] <= 9
 + digits does not contain any leading 0's.
+
+TC: O(n)
+
+SC: O(n)
+
+```java
+class Solution {
+    public int[] plusOne(int[] digits) {
+        int n = digits.length;
+        
+        for(int i = n - 1; i >= 0; i--){
+            if(digits[i] == 9){
+                digits[i] = 0;
+                
+            }else{//如果input小于9，直接返回
+                digits[i]++;
+                return digits;
+            }
+        }
+        
+        digits = new int[n + 1];
+        digits[0] = 1;
+        return digits;
+    }
+}
+```
