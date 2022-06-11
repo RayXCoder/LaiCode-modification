@@ -77,3 +77,5 @@ My consideration  about some questions
 + [LeetCode 62. Unique Paths](LeetCode-62-Unique-Paths.md)
 + [LeetCode 98. Validate Binary Search Tree](LeetCode-98-Validate-Binary-Search-Tree.md)
 + [LeetCode 66. Plus One](LeetCode-66-Plus-One.md)
++ [LeetCode 141. Linked List Cycle](LeetCode-141-Linked-List-Cycle.md)
++ [LeetCode 69. Sqrt(x)](LeetCode-69-Sqrt(x).md)
