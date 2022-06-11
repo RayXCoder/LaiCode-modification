@@ -76,3 +76,4 @@ My consideration  about some questions
 + [LeetCode 67. Add Binary](LeetCode-67-Add-Binary.md)
 + [LeetCode 62. Unique Paths](LeetCode-62-Unique-Paths.md)
 + [LeetCode 98. Validate Binary Search Tree](LeetCode-98-Validate-Binary-Search-Tree.md)
++ [LeetCode 66. Plus One](LeetCode-66-Plus-One.md)
