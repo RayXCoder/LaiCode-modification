@@ -41,7 +41,7 @@ class Solution {
             return;
         }
         
-        
+        //吃
         cur.add(nums[index]);
         dfs(result, cur, nums, index + 1);
         cur.remove(cur.size() - 1);
@@ -51,6 +51,8 @@ class Solution {
             //所以在走‘没吃’之前检查下一个元素是相同，如果相同就不用走了直接跳过
             index++;
         }
+        
+        //没吃
         dfs(result, cur, nums, index + 1);
     }
 }
