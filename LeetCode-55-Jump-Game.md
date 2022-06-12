@@ -22,3 +22,28 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum jump 
 ## Constraints:
 + 1 <= nums.length <= 10^4
 + 0 <= nums[i] <= 10^5
+
+TC: O(n^2)
+
+SC: O(n)
+
+```java
+class Solution {
+    public boolean canJump(int[] nums) {
+        
+        boolean[] dp = new boolean[nums.length];
+        dp[0] = true;
+        
+        for(int i = 1; i < dp.length; i++){
+            for(int j = i - 1; j >= 0 ; j--){
+                if(dp[j] && (nums[j] + j  >= i)){
+                    dp[i] = true;
+                    break;
+                }
+            }
+        }
+        
+        return dp[dp.length - 1];
+    }
+}
+```
