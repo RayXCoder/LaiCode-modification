@@ -49,7 +49,7 @@ class Solution {
             i--;
         }
         
-        // k = index = 4
+        // k = index = 3
         int k = i;
         
         //find the number nums[j] that is just greater than nums[i]
